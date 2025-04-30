@@ -18,7 +18,10 @@ int main()
     //Проверяем работу третьего теста
     test_first.test_all_ships_sunk();
 
-    cout << "Тесты прошли успешно!" << endl;
+    //Проверяем работу четвертого теста
+    test_first.test_game();
+
+    cout << endl << "Тесты прошли успешно!" << endl;
 
     return 0;
 }

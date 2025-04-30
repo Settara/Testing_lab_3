@@ -34,7 +34,7 @@ void Test_Morskoy_boy::test_all_ships_sunk() {
 }
 
 //„етвертый тест, который провер€ет симул€цию игры
-void test_game() {
+void Test_Morskoy_boy::test_game() {
     Game game;
     game.setup();
     game.playOneTurn();  //сделает 1 ход, не провер€ем на результат
