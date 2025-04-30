@@ -1,9 +1,8 @@
 #include "Test_Morskoy_boy.h"
-#include "Board.h"
-#include <cassert>
 
 //Первый тест который проверяет установку корабля
-void Test_Morskoy_boy::test_place_ship() {
+void Test_Morskoy_boy::test_place_ship() 
+{
     //Создаем поле размера 10 на 10
     Board board(10);
     //Проверяем работу метода установки корабля

@@ -21,9 +21,15 @@
     <ClCompile Include="Test_Morskoy_boy.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Test_Morskoy_boy.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

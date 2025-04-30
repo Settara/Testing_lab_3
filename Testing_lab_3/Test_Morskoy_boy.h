@@ -1,4 +1,9 @@
 #pragma once
+#include <iostream>
+#include <cassert>
+
+#include "Board.h"
+
 class Test_Morskoy_boy
 {
 public:
