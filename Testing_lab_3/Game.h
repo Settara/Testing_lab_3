@@ -3,7 +3,6 @@
 
 #include "Board.h"
 
-
 class Game 
 {
 public:

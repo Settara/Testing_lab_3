@@ -33,13 +33,22 @@ void Test_Morskoy_boy::test_all_ships_sunk() {
     assert(board.allShipsSunk());
 }
 
-//Четвертый тест, который проверяет симуляцию игры
+//Четвертый тест, который проверяет симуляцию игры(1 ход)
 void Test_Morskoy_boy::test_game() {
     Game game;
     game.setup();
     game.playOneTurn();  //сделает 1 ход, не проверяем на результат
 }
 
+//Пятый тест, который проверяет симуляцию игры(много ходов)
+void Test_Morskoy_boy::test_game_cycle() {
+    Game game;
+    game.setup();
+    while (!game.isGameOver()) {
+        game.playTurnAuto(); // ход без взаимодействия с пользователем
+    }
+    assert(game.isGameOver());
+}
 
 
 

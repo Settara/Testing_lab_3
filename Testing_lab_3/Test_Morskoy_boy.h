@@ -11,6 +11,7 @@ public:
 	void test_shot();
 	void test_all_ships_sunk();
 	void test_game();
+	void test_game_cycle();
 	
 };
 

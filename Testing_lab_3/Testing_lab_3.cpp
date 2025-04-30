@@ -21,6 +21,9 @@ int main()
     //Проверяем работу четвертого теста
     test_first.test_game();
 
+    //Проверяем работу четвертого теста
+    test_first.test_game_cycle();
+
     cout << endl << "Тесты прошли успешно!" << endl;
 
     return 0;
