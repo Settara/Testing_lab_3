@@ -10,6 +10,7 @@ public:
     Board(int size);
     bool placeShip(int row, int column, int length, bool horizontally);
     bool isThereShip(int row, int column) const;
+    bool shoot(int row, int col);
 
 private:
     int size_;

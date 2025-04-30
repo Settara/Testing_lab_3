@@ -15,7 +15,7 @@ void Test_Morskoy_boy::test_place_ship()
 }
 
 //Второй тест, который проверяет выстрел
-void test_shot() {
+void Test_Morskoy_boy::test_shot() {
     Board board(10);
     board.placeShip(0, 0, 2, true);
     assert(board.shoot(0, 0) == true);  //попал

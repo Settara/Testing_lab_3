@@ -30,3 +30,14 @@ bool Board::isThereShip(int row, int column) const
 {
     return net[row][column] == '1';
 }
+
+bool Board::shoot(int row, int col) {
+    if (net[row][col] == '1') {
+        net[row][col] = 'X';
+        return true;
+    }
+    else {
+        net[row][col] = '.';
+        return false;
+    }
+}
