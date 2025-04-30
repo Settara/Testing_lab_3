@@ -14,5 +14,15 @@ void Test_Morskoy_boy::test_place_ship()
     assert(board.isThereShip(2, 6));
 }
 
+//Второй тест, который проверяет выстрел
+void test_shot() {
+    Board board(10);
+    board.placeShip(0, 0, 2, true);
+    assert(board.shoot(0, 0) == true);  //попал
+    assert(board.shoot(0, 1) == true);  //попал
+    assert(board.shoot(0, 2) == false); //мимо
+}
+
+
 
 
