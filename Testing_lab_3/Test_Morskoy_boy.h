@@ -9,5 +9,6 @@ class Test_Morskoy_boy
 public:
 	void test_place_ship();
 	void test_shot();
+	void test_all_ships_sunk();
 };
 

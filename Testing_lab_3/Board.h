@@ -11,6 +11,7 @@ public:
     bool placeShip(int row, int column, int length, bool horizontally);
     bool isThereShip(int row, int column) const;
     bool shoot(int row, int col);
+    bool allShipsSunk() const;
 
 private:
     int size_;

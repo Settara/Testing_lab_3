@@ -31,7 +31,8 @@ bool Board::isThereShip(int row, int column) const
     return net[row][column] == '1';
 }
 
-bool Board::shoot(int row, int col) {
+bool Board::shoot(int row, int col) 
+{
     if (net[row][col] == '1') {
         net[row][col] = 'X';
         return true;
@@ -41,3 +42,16 @@ bool Board::shoot(int row, int col) {
         return false;
     }
 }
+
+bool Board::allShipsSunk() const 
+{
+    for (const auto& row : net) 
+    {
+        for (auto& cell : row) 
+        {
+            if (cell == '1') return false;
+        }
+    }
+    return true;
+}
+

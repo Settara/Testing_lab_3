@@ -12,6 +12,12 @@ int main()
     //Проверяем работу первого теста
     test_first.test_place_ship();
 
+    //Проверяем работу второго теста
+    test_first.test_shot();
+
+    //Проверяем работу третьего теста
+    test_first.test_all_ships_sunk();
+
     cout << "Тесты прошли успешно!" << endl;
 
     return 0;
