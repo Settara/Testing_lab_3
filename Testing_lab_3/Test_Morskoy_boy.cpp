@@ -1,4 +1,5 @@
 #include "Test_Morskoy_boy.h"
+#include "Game.h"
 
 //ѕервый тест который провер€ет установку корабл€
 void Test_Morskoy_boy::test_place_ship() 
@@ -30,6 +31,13 @@ void Test_Morskoy_boy::test_all_ships_sunk() {
     board.shoot(1, 1);
     board.shoot(1, 2);
     assert(board.allShipsSunk());
+}
+
+//„етвертый тест, который провер€ет симул€цию игры
+void test_game() {
+    Game game;
+    game.setup();
+    game.playOneTurn();  //сделает 1 ход, не провер€ем на результат
 }
 
 
