@@ -23,6 +23,15 @@ void Test_Morskoy_boy::test_shot() {
     assert(board.shoot(0, 2) == false); //мимо
 }
 
+//Третий тест, который проверяет все ли корабли потоплены
+void test_all_ships_sunk() {
+    Board board(10);
+    board.placeShip(1, 1, 2, true);
+    board.shoot(1, 1);
+    board.shoot(1, 2);
+    assert(board.allShipsSunk());
+}
+
 
 
 
