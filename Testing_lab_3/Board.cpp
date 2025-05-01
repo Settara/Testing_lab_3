@@ -1,6 +1,6 @@
 #include "Board.h"
 
-Board::Board(int size) : size_(size), net(size, vector<char>(size, '0')) {}
+Board::Board(int size) : size_(size), net(size, vector<char>(size, '.')) {}
 
 bool Board::placeShip(int row, int column, int length, bool horizontally) 
 {
@@ -13,7 +13,7 @@ bool Board::placeShip(int row, int column, int length, bool horizontally)
     {
         int r = row + (horizontally ? 0 : i);
         int c = column + (horizontally ? i : 0);
-        if (net[r][c] != '0') return false;
+        if (net[r][c] != '.') return false;
     }
 
     //Размещение корабля
@@ -21,24 +21,24 @@ bool Board::placeShip(int row, int column, int length, bool horizontally)
     {
         int r = row + (horizontally ? 0 : i);
         int c = column + (horizontally ? i : 0);
-        net[r][c] = '1';
+        net[r][c] = 'T';
     }
     return true;
 }
 
 bool Board::isThereShip(int row, int column) const 
 {
-    return net[row][column] == '1';
+    return net[row][column] == 'T';
 }
 
 bool Board::shoot(int row, int col) 
 {
-    if (net[row][col] == '1') {
+    if (net[row][col] == 'T') {
         net[row][col] = 'X';
         return true;
     }
     else {
-        net[row][col] = '.';
+        net[row][col] = 'O';
         return false;
     }
 }
@@ -49,7 +49,7 @@ bool Board::allShipsSunk() const
     {
         for (auto& cell : row) 
         {
-            if (cell == '1') return false;
+            if (cell == 'T') return false;
         }
     }
     return true;

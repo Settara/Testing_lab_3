@@ -12,8 +12,6 @@ public:
     bool isThereShip(int row, int column) const;
     bool shoot(int row, int col);
     bool allShipsSunk() const;
-
-private:
     int size_;
     vector<vector<char>> net;
 };
